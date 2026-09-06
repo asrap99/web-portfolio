@@ -1,0 +1,26 @@
+@import "tailwindcss";
+/* src/styles/global.css */
+
+body {
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+    background-color: #F5F5F5;
+}
+
+/* KELAS UTILITAS NEO-BRUTALISM */
+.nb-border-heavy { 
+    border: 3px solid #000000 !important; 
+}
+
+.nb-shadow-black { 
+    box-shadow: 6px 6px 0px 0px #000000 !important; 
+}
+
+.nb-btn-click { 
+    transition: transform 0.05s ease, box-shadow 0.05s ease; 
+}
+
+.nb-btn-click:active {
+    transform: translate(6px, 6px);
+    box-shadow: 0px 0px 0px 0px #000000 !important;
+}

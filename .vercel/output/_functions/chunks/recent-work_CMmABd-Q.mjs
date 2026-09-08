@@ -17,7 +17,7 @@ var $$RecentWork = createComponent(async ($$result, $$props, $$slots) => {
 	}).fetch(`*[_type == "recentWork"] | order(_createdAt desc){
   title,
   description,
-   "imageUrl": image.asset->url + "?w=1200&q=75&auto=format",
+    "imageUrl": image.asset->url + "?w=1200&q=75&auto=format",
   date,
   category,
   tech,

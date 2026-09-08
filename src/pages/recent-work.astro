@@ -14,7 +14,7 @@ const client = createClient({
 const recentWorkQuery = `*[_type == "recentWork"] | order(_createdAt desc){
   title,
   description,
-  "imageUrl": image.asset->url,
+   "imageUrl": image.asset->url + "?w=1200&q=75&auto=format",
   date,
   category,
   tech,
@@ -100,7 +100,13 @@ const getCategoryColor = (category) => {
                         
                         <div class="w-full h-full overflow-hidden relative">
                             {work.imageUrl ? (
-                                <img src={work.imageUrl} alt={work.title} class="w-full h-full object-cover min-h-[250px] md:min-h-full group-hover:scale-105 transition duration-500">
+                              <img
+                                src={work.imageUrl}
+                                alt={work.title}
+                                loading="lazy"
+                                decoding="async"
+                                class="w-full h-full object-cover min-h-[250px] md:min-h-full group-hover:scale-105 transition duration-500"
+                                >
                             ) : (
                                 <div class="w-full h-full min-h-[250px] flex items-center justify-center text-gray-400">No Image</div>
                             )}
